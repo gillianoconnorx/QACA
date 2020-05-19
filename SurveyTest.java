@@ -3,6 +3,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.ArrayList;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -73,7 +74,17 @@ public class SurveyTest {
 			//New survey response object
 			Response res = new Response();
 			assertTrue("Response", res instanceof Response);
-		}
+        }
+        
+       //answers to a survey response being added
+		@Test //Test Attribute
+		public void responseAnswer()
+		{
+			//Survey response object
+			Response res = new Response();
+			//set an answer to the survey response
+			res.setAnswer(1);
+			assertNotNull("The answer should not be null" , res.getAnswer());
 	
 } 
     
