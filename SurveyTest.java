@@ -72,7 +72,7 @@ public class SurveyTest {
 		{		
 			//New survey response object
 			Response res = new Response();
-			assertTrue(" Response", res instanceof Survey);
+			assertTrue("Response", res instanceof Response);
 		}
 	
 } 
