@@ -35,7 +35,16 @@ This will contain all my documentation for my Code Review CheckList.
 	
 **Dev**
 
-This branch will contain the code for the survey and responses. 
+This branch will contain the code for the survey. 
+
+**Devres**
+
+This branch will contain the code for the survey responses. 
+
+**Devmath**
+
+This branch will contain the code for the maths ie. the average, the min and max score. 
+
 	
 * All the branches will be merged to the develop branch and then added to the master branch. 
 	
