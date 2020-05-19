@@ -42,7 +42,25 @@ public class SurveyTest {
 			s.add(two);
 
 			assertEquals("Questions are 2",2 ,s.getQuestions().size());
-		}
+        }
+        
+        //does a collection of questions exists within the survey objects
+	    @Test
+	    public void surveyQuestions()
+	    {		
+		//Question object
+		Questions one = new Questions("Dogs");
+		//Collection representing questions
+		ArrayList<Questions> questions = new ArrayList<Questions>();
+		//Add question to list
+		questions.add(one);
+
+		Survey survey = new Survey("All Animals" ,questions);
+		assertTrue("ArrayList'",survey.getQuestions() instanceof ArrayList);
+	}
+	
+	
+	
 } 
     
 
