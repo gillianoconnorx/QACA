@@ -11,6 +11,12 @@ public class Survey {
 	public Survey(String name, ArrayList<Questions> questions) {
 		this.name = name;
 		this.questions = questions;
+    }
+    
+	//Add questions
+	public void add(Questions q)
+	{
+		this.questions.add(q);
 	}
 
 
