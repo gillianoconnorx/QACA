@@ -2,6 +2,10 @@ import java.util.ArrayList;
 
 public class Survey {
 
+    public Survey(){
+        
+    }
+
 	//Survey
 	private String name;
 	//Collection of questions

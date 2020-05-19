@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -85,7 +86,23 @@ public class SurveyTest {
 			//set an answer to the survey response
 			res.setAnswer(1);
 			assertNotNull("The answer should not be null" , res.getAnswer());
-	
+        }
+
+        //responses can be gotten from questions
+	    @Test
+	    public void questionResponse()
+	    {
+		//Create survey
+		Survey survey = new Survey();
+        //Question objectS
+		Questions one = new Questions("Dogs");
+        //Add answers to question responses
+		one.getResponse().setAnswer(2);
+	    //get first questions response answer
+		assertEquals("Value should be '2'",2,one.getResponse().getAnswer());
+	}
+
+
 } 
     
 
