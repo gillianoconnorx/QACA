@@ -64,7 +64,16 @@ public class SurveyTest {
 
 		Survey survey = new Survey("All Animals" ,questions);
 		assertTrue("ArrayList'",survey.getQuestions() instanceof ArrayList);
-	}
+    }
+    
+	//check response class
+		@Test //Test Attribute
+		public void createResponse()
+		{		
+			//New survey response object
+			Response res = new Response();
+			assertTrue(" Response", res instanceof Survey);
+		}
 	
 } 
     
