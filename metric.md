@@ -16,7 +16,7 @@ that measures the amount of testing performed by a set of test.
 
 ![Java Test Runner](test_metric.png)
 
- Java Test Runner offers:
+ Java Test Runner offers :
 
    * Run/Debug test cases
    * Customize test configurations
