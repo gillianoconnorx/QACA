@@ -64,6 +64,22 @@ public class Survey {
         //returning max
 		maxValue = Collections.max(valueList); 
 		return maxValue; 
-	}
+    }
+
+    public double getAverage()
+	{
+    //The sum of all question values - the starting value must be 0
+		int total = 0;
+		for(Questions quest:this.questions)
+		{
+            //value
+			total+= quest.getAns();
+		}
+
+		//Calculate the mean
+        double mean = (float)total/this.questions.size();
+        return mean;  
+    }
+
 
 } 
