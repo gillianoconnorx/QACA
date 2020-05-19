@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 
 public class Survey {
-
+//average etc
     public Survey(){
-        
+
     }
 
 	//Survey
