@@ -1,9 +1,10 @@
 import java.util.ArrayList;
+import java.util.Collections; 
 
 public class Survey {
-
+//average etc
     public Survey(){
-        
+
     }
 
 	//Survey
@@ -39,6 +40,52 @@ public class Survey {
 	public void setQuestions(ArrayList<Questions> questions) {
 		this.questions = questions;
     }
+
+    
+    public int getMinValue()
+	{
+		int minValue = 0;
+		ArrayList<Integer> valueList = new ArrayList<Integer>();
+            //iterating
+		for(Questions quest : this.questions) 
+		{
+			valueList.add(quest.getAns()); 
+		}
+		minValue = Collections.min(valueList); 
+		return minValue; 
+	}
+    
+    public int getMaxValue()
+	{
+		int maxValue = 0;
+		ArrayList<Integer> valueList = new ArrayList<Integer>(); 
+            //iterating 
+		for(Questions quest : this.questions)
+		{
+			valueList.add(quest.getAns()); 
+        }
+        //returning max
+		maxValue = Collections.max(valueList); 
+		return maxValue; 
+    }
+
+    public double getAverage()
+	{
+    //The sum of all question values - the starting value must be 0
+		int total = 0;
+		for(Questions quest:this.questions)
+		{
+            //value
+			total+= quest.getAns();
+		}
+
+		//Calculate the mean
+        double mean = (float)total/this.questions.size();
+        return mean;  
+    }
+
+
+
  
 	
 	//Return survey response
@@ -47,4 +94,5 @@ public class Survey {
 		return this.res;
 	}
 	
+
 } 
