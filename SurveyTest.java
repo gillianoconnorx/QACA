@@ -3,8 +3,17 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.ArrayList;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.jupiter.api.Test;
+import org.junit.Test;
+
 public class SurveyTest {
 
+	
 	//Test - create an empty survey
 	@Test
 	public void createSurveyEmpty()
@@ -57,10 +66,43 @@ public class SurveyTest {
 
 		Survey survey = new Survey("All Animals" ,questions);
 		assertTrue("ArrayList'",survey.getQuestions() instanceof ArrayList);
+    }
+    
+	//check response class
+		@Test //Test Attribute
+		public void createResponse()
+		{		
+			//New survey response object
+			Response res = new Response();
+			assertTrue("Response", res instanceof Response);
+        }
+        
+       //answers to a survey response being added
+		@Test //Test Attribute
+		public void responseAnswer()
+		{
+			//Survey response object
+			Response res = new Response();
+			//set an answer to the survey response
+			res.setAnswer(1);
+			assertNotNull("The answer should not be null" , res.getAnswer());
+        }
+
+        //responses can be gotten from questions
+	    @Test
+	    public void questionResponse()
+	    {
+		//Create survey
+		Survey survey = new Survey();
+        //Question objectS
+		Questions one = new Questions("Dogs");
+        //Add answers to question responses
+		one.getResponse().setAnswer(2);
+	    //get first questions response answer
+		assertEquals("Value should be '2'",2,one.getResponse().getAnswer());
 	}
-	
-	
-	
+
+
 } 
     
 
